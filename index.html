@@ -31,6 +31,16 @@
         font-size: 30px
       }
     </style>
+    <script>
+      let details = navigator.userAgent
+      let regexp = /android|blackberry|kindle|nokia|windows phone|iphone|ipad/i
+      let isMobileDevice = regexp.test(details)
+
+      if (isMobileDevice) {
+        document.getElementsByTagName("p1")[0].style.fontSize = "20px"
+        document.getElementsByTagName("p2")[0].style.fontSize = "20px"
+      }
+    </script>
   </head>
   <body>
     <div id="welcome">
