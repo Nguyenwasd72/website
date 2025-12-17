@@ -20,7 +20,7 @@
     
       #welcome {
         background-color: #8cb0ed;
-        position: absolute;
+        position: fixed;
         left: 0;
         top: 0;
         width: 100%;
@@ -37,9 +37,7 @@
       }
 
       #social {
-        position: absolute;
-        left: 0;
-        top: 35vh
+        margin-top: 35vh
       }
     </style>
   </head>
@@ -65,7 +63,7 @@
       let isMobileDevice = regexp.test(details)
 
       if (isMobileDevice) {
-        for (let i = 0; i < document.getElementsByTagName("h1").length; i++) {document.getElementsByTagName("h1")[i].style.fontSize = "30px"}
+        for (let i = 0; i < document.getElementsByTagName("h1").length; i++) {document.getElementsByTagName("h1")[i].style.fontSize = "40px"}
         for (let i = 0; i < document.getElementsByTagName("p1").length; i++) {document.getElementsByTagName("p1")[i].style.fontSize = "20px"}
         for (let i = 0; i < document.getElementsByClassName("small").length; i++) {document.getElementsByClassName("small")[i].style.fontSize = "10px"}
         document.getElementById("welcome-texts").style.marginLeft = "20px"
