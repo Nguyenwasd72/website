@@ -47,7 +47,7 @@
     <div id="welcome">
       <div id="welcome-texts">
         <h1>Hello!</h1>
-        <p1>Welcome to my website! I'm Nguyên aka ImAGuyLikeCodin <span class="small">or Nguyenwasd72 on GitHub</span>, the creator of this website</p1>
+        <p1>Welcome to my website! I'm Nguyên aka ImAGuyLikeCodin <span class="small">(or Nguyenwasd72 on GitHub)</span>, the creator of this website</p1>
         <br>
         <p1>This is just the introduction of me and my website, you may explore now</p2>
       </div>
@@ -65,6 +65,7 @@
       let isMobileDevice = regexp.test(details)
 
       if (isMobileDevice) {
+        for (let i = 0; i < document.getElementsByTagName("h1").length; i++) {document.getElementsByTagName("h1")[i].style.fontSize = "30px"}
         for (let i = 0; i < document.getElementsByTagName("p1").length; i++) {document.getElementsByTagName("p1")[i].style.fontSize = "20px"}
         for (let i = 0; i < document.getElementsByClassName("small").length; i++) {document.getElementsByClassName("small")[i].style.fontSize = "10px"}
         document.getElementById("welcome-texts").style.marginLeft = "20px"
