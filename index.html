@@ -42,6 +42,24 @@
         width: fit-content;
         outline: 3px solid black
       }
+
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 50px
+        }
+        p1 {
+          font-size: 20px
+        }
+        .small {
+          font-size: 15px
+        }
+        #welcome-texts {
+          margin-left: 20px
+        }
+        #social {
+          outline: 2px solid black
+        }
+      }
     </style>
   </head>
   <body>
@@ -71,18 +89,5 @@
         </a>
       </div>
     </div>
-    <script>
-      let details = navigator.userAgent
-      let regexp = /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i
-      let isMobileDevice = regexp.test(details)
-
-      if (isMobileDevice) {
-        for (let i = 0; i < document.getElementsByTagName("h1").length; i++) {document.getElementsByTagName("h1")[i].style.fontSize = "50px"}
-        for (let i = 0; i < document.getElementsByTagName("p1").length; i++) {document.getElementsByTagName("p1")[i].style.fontSize = "20px"}
-        for (let i = 0; i < document.getElementsByClassName("small").length; i++) {document.getElementsByClassName("small")[i].style.fontSize = "15px"}
-        document.getElementById("welcome-texts").style.marginLeft = "20px"
-        document.getElementById("social").style.outline = "2px solid black"
-      }
-    </script>
   </body>
 </html>
