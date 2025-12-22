@@ -88,27 +88,25 @@
       </div>
     </div>
     <div id="spacer"></div>
-    <div id="main">
-      <div id="social">
-        <p1>My social:</p1>
-        <div id="twitter">
-          <a href="https://twitter.com/ImAGuyLikeCodin/">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Logo_of_Twitter.svg/2560px-Logo_of_Twitter.svg.png" alt="we are not calling this x" style="width:45px; height:35px;">
-          </a>
-        </div>
-        <div id="discord">
-          <a href="https://discord.com/users/884019263160062002">
-            <img src="https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/66e3d80db9971f10a9757c99_Symbol.svg" alt="discord" style="width:50px; height:50px">
-          </a>
-        </div>
-        <div id="github">
-          <a href="https://github.com/Nguyenwasd72/">
-            <img src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" alt="github" style="width:50px; height:50px;">
-          </a>
-        </div>
+    <div id="social">
+      <p1>My social:</p1>
+      <div id="twitter">
+        <a href="https://twitter.com/ImAGuyLikeCodin/">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Logo_of_Twitter.svg/2560px-Logo_of_Twitter.svg.png" alt="we are not calling this x" style="width:45px; height:35px;">
+        </a>
       </div>
-      <div style="height: 1000px"><!--scroll test--></div>
+      <div id="discord">
+        <a href="https://discord.com/users/884019263160062002">
+          <img src="https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/66e3d80db9971f10a9757c99_Symbol.svg" alt="discord" style="width:50px; height:50px">
+        </a>
+      </div>
+      <div id="github">
+        <a href="https://github.com/Nguyenwasd72/">
+          <img src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" alt="github" style="width:50px; height:50px;">
+        </a>
+      </div>
     </div>
+    <div style="height: 1000px"><!--scroll test--></div>
     <script>
       const welcome = document.getElementById("welcome")
       const welcomeTexts = document.getElementById("welcome-texts")
@@ -116,11 +114,6 @@
       window.addEventListener("scroll", () => {
         welcome.classList.toggle("shrink", window.scrollY > 50)
         welcomeTexts.classList.toggle("hide", window.scrollY > 50)
-        if (welcomeTexts.classList.contains('hide')) {
-          main.style.marginTop = "100px"
-        } else {
-          main.style.marginTop = ""
-        }
       })
     </script>
   </body>
