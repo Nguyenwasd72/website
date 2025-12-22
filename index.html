@@ -26,7 +26,8 @@
         width: 100%;
         overflow: hidden;
         position: fixed;
-        height: 210px
+        height: 200px;
+        transition: height 0.25s ease
       }
 
       #welcome-texts {
@@ -36,16 +37,19 @@
         margin-top: 20px;
         padding-bottom: 50px;
         font-size: 30px;
-        transition: opacity 0.25s ease, height 0.25s ease
+        transition: opacity 0.25s ease
       }
 
-      #welcome-texts.hide {
-        opacity: 0;
+      #welcome.shrink {
         height: 100px
+      }
+      
+      #welcome-texts.hide {
+        opacity: 0
       }
 
       #spacer {
-        height: 210px
+        height: 203px
       }
 
       #social {
@@ -105,8 +109,10 @@
     </div>
     <div style="height: 1000px"><!--scroll test--></div>
     <script>
+      const welcome = document.getElementById("welcome")
       const welcomeTexts = document.getElementById("welcome-texts")
       window.addEventListener("scroll", () => {
+        welcome.classList.toggle("shrink", window.scrollY > 100)
         welcomeTexts.classList.toggle("hide", window.scrollY > 100)
       })
     </script>
