@@ -35,7 +35,6 @@
         position: relative;
         margin-left: 50px;
         margin-top: 20px;
-        padding-bottom: 50px;
         font-size: 30px;
         transition: opacity 0.25s ease
       }
@@ -118,9 +117,9 @@
         welcome.classList.toggle("shrink", window.scrollY > 50)
         welcomeTexts.classList.toggle("hide", window.scrollY > 50)
         if (welcome.classList.contains('hide')) {
-          main.style.paddingTop = "100px"
+          main.style.marginTop = "100px"
         } else {
-          main.style.paddingTop = ""
+          main.style.marginTop = ""
         }
       })
     </script>
