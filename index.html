@@ -26,6 +26,14 @@
         width: 100%;
         overflow: hidden
       }
+      
+      #welcome.shrink {
+        font-size: 20px
+      }
+
+      #welcome.fixed {
+        position: fixed
+      }
 
       #welcome-texts {
         color: white;
@@ -34,10 +42,6 @@
         margin-top: 20px;
         padding-bottom: 50px;
         font-size: 30px
-      }
-
-      #welcome-texts.shrink {
-        font-size: 20px
       }
 
       #social {
@@ -96,9 +100,10 @@
     </div>
     <div style="height: 1000px"><!--scroll test--></div>
     <script>
-      const welcomeTexts = document.getElementById("welcome-texts")
+      const welcome = document.getElementById("welcome")
       window.addEventListener("scroll", () => {
-        welcomeTexts.classList.toggle("shrink", window.scrollY > 150)
+        welcome.classList.toggle("shrink", window.scrollY > 100)
+        welcome.classList.toggle("fixed", window.scrollY > 100)
       })
     </script>
   </body>
