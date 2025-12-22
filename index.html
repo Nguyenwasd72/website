@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Nguyenwasd72's website</title>
-    <link rel="icon" href="https://pbs.twimg.com/profile_images/1504332161822117895/HOvrMJF2_400x400.jpg">
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/97346078">
     <meta charset="UTF-8">
     <meta content="Nguyenwasd72's website" property="og:title" />
     <meta content="Never hosted a website on Github before so i decided to try it" property="og:description" />
@@ -22,9 +22,14 @@
       }
     
       #welcome {
+        position: sticky;
         background-color: #8cb0ed;
         width: 100%;
         overflow: hidden
+      }
+
+      #welcome.shrink * {
+        font-size: 20px
       }
 
       #welcome-texts {
@@ -91,5 +96,11 @@
       </div>
     </div>
     <div style="height: 1000px"><!--scroll test--></div>
+    <script>
+      const welcome = document.getElementById("welcome")
+      window.addEventListener("scroll", () => {
+        welcome.classList.toggle("shrink", window.scrollY > 50)
+      })
+    </script>
   </body>
 </html>
