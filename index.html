@@ -116,7 +116,7 @@
       window.addEventListener("scroll", () => {
         welcome.classList.toggle("shrink", window.scrollY > 50)
         welcomeTexts.classList.toggle("hide", window.scrollY > 50)
-        if (welcome.classList.contains('hide')) {
+        if (welcomeTexts.classList.contains('hide')) {
           main.style.marginTop = "100px"
         } else {
           main.style.marginTop = ""
