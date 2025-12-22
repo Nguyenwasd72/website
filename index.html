@@ -48,12 +48,13 @@
       }
 
       #welcome-shrinked {
-        opacity: 0
+        color: white;
+        margin-left: 10px;
         transition: opacity 0.5s ease
       }
 
-      #welcome-shrinked.show {
-        opacity: 1
+      #welcome-shrinked.hide {
+        opacity: 0
       }
 
       #spacer {
@@ -95,8 +96,8 @@
         <br>
         <p1>This is just the introduction of me and my website, you may explore now</p2>
       </div>
-      <div id="welcome-shrinked">
-        <h1>ImAGuyLikeCodin's website</h1>
+      <div id="welcome-shrinked" class="hide">
+        <p1>ImAGuyLikeCodin's website</p1>
       </div>
     </div>
     <div id="spacer"></div>
@@ -126,7 +127,7 @@
       window.addEventListener("scroll", () => {
         welcome.classList.toggle("shrink", window.scrollY > 50)
         welcomeTexts.classList.toggle("hide", window.scrollY > 50)
-        welcomeShrinked.classList.toggle("show", window.scrollY > 50)
+        welcomeShrinked.classList.toggle("hide", window.scrollY > 50)
       })
     </script>
   </body>
