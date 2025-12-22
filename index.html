@@ -4,7 +4,7 @@
     <title>Nguyenwasd72's website</title>
     <link rel="icon" href="https://avatars.githubusercontent.com/u/97346078">
     <meta charset="UTF-8">
-    <meta content="Nguyenwasd72's website" property="og:title" />
+    <meta content="ImAGuyLikeCodin's website" property="og:title" />
     <meta content="Never hosted a website on Github before so i decided to try it" property="og:description" />
     <meta content="https://nguyenwasd72.github.io/website" property="og:url" />
     <meta content="https://avatars.githubusercontent.com/u/97346078" property="og:image" />
@@ -27,7 +27,7 @@
         overflow: hidden;
         position: fixed;
         height: 200px;
-        transition: height 0.25s ease
+        transition: height 0.5s ease
       }
 
       #welcome-texts {
@@ -36,7 +36,7 @@
         margin-left: 50px;
         margin-top: 20px;
         font-size: 30px;
-        transition: opacity 0.25s ease
+        transition: opacity 0.5s ease
       }
 
       #welcome.shrink {
@@ -45,6 +45,15 @@
       
       #welcome-texts.hide {
         opacity: 0
+      }
+
+      #welcome-shrinked {
+        opacity: 0
+        transition: opacity 0.5s ease
+      }
+
+      #welcome-shrinked.show {
+        opacity: 1
       }
 
       #spacer {
@@ -86,6 +95,9 @@
         <br>
         <p1>This is just the introduction of me and my website, you may explore now</p2>
       </div>
+      <div id="welcome-shrinked">
+        <h1>ImAGuyLikeCodin's website</h1>
+      </div>
     </div>
     <div id="spacer"></div>
     <div id="social">
@@ -110,10 +122,11 @@
     <script>
       const welcome = document.getElementById("welcome")
       const welcomeTexts = document.getElementById("welcome-texts")
-      const main = document.getElementById("main")
+      const welcomeShrinked = document.getElementById("welcome-shrinked")
       window.addEventListener("scroll", () => {
         welcome.classList.toggle("shrink", window.scrollY > 50)
         welcomeTexts.classList.toggle("hide", window.scrollY > 50)
+        welcomeShrinked.classList.toggle("show", window.scrollY > 50)
       })
     </script>
   </body>
