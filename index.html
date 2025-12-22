@@ -33,7 +33,12 @@
         margin-left: 50px;
         margin-top: 20px;
         padding-bottom: 50px;
-        font-size: 30px
+        font-size: 30px;
+        transition: opacity 0.25s ease
+      }
+
+      #welcome-texts {
+        opacity: 0
       }
 
       #social {
@@ -94,7 +99,7 @@
     <script>
       const welcomeTexts = document.getElementById("welcome-texts")
       window.addEventListener("scroll", () => {
-        welcomeTexts.classList.toggle("hide", window.scrollY > welcomeTexts.offsetTop)
+        welcomeTexts.classList.toggle("hide", window.scrollY > 100)
       })
     </script>
   </body>
