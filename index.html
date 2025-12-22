@@ -24,16 +24,7 @@
       #welcome {
         background-color: #8cb0ed;
         width: 100%;
-        overflow: hidden;
-        transition: transform 0.25s ease
-      }
-      
-      #welcome.shrink * {
-        font-size: 0.8em
-      }
-
-      #welcome.fixed {
-        position: fixed
+        overflow: hidden
       }
 
       #welcome-texts {
@@ -101,10 +92,9 @@
     </div>
     <div style="height: 1000px"><!--scroll test--></div>
     <script>
-      const welcome = document.getElementById("welcome")
+      const welcomeTexts = document.getElementById("welcome-texts")
       window.addEventListener("scroll", () => {
-        welcome.classList.toggle("shrink", window.scrollY > welcome.offsetTop)
-        welcome.classList.toggle("fixed", window.scrollY > welcome.offsetTop)
+        welcomeTexts.classList.toggle("hide", window.scrollY > welcomeTexts.offsetTop)
       })
     </script>
   </body>
