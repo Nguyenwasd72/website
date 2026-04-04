@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Days until THPT</title>
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/97346078">
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap');
+
+        body {
+            margin: 0
+        }
+
+        h1 {
+            font-family: "Oswald", sans-serif;
+            color: yellow;
+        }
+
+        p1 {
+            font-family: "Montserrat", sans-serif;
+            color: yellow
+        }
+
+        #image {
+            position: relative;
+            min-height: 700px;
+            max-width: 700px;
+        }
+
+        #background {
+            position: absolute;
+            z-index: -1;
+        }
+
+        #only {
+            position: absolute;
+            left: 290px;
+            font-size: 28px;
+            text-shadow: 3px 3px #000000;
+        }
+
+        #days {
+            position: absolute;
+            left: 90px;
+            top: 140px;
+            width: 500px;
+            height: 270px;
+            background-color: rgba(0, 0, 0, 0.67);
+            border-radius: 25px;
+            text-align: center;
+        }
+
+        #number {
+            position: absolute;
+            top: -155px;
+            width: 100%;
+            font-size: 200px;
+            text-shadow: 5px 5px #000000;
+        }
+
+        #day {
+            position: absolute;
+            left: 89px;
+            top: 450px;
+            width: 500px;
+            height: 130px;
+            background-color: rgba(0, 0, 0, 0.67);
+            border-radius: 25px;
+            text-align: center;
+        }
+
+        #daytext {
+            position: absolute;
+            left: 160px;
+            top: 30px;
+            font-size: 60px;
+            text-shadow: 5px 5px #000000;
+        }
+
+        #watermark {
+            position: absolute;
+            left: 225px;
+            top: 620px;
+            font-size: 14px;
+            text-shadow: 2px 2px #000000;
+        }
+    </style>
+</head>
+<body>
+    <div id="image">
+        <div id="background">
+            <img src="./clover.jpg" style="height:700px;width:700px;"></img>
+        </div>
+        <div id="only">
+            <h1>CÒN</h1>
+        </div>
+        <div id="days">
+            <h1 id="number"></h1>
+        </div>
+        <div id="day">
+            <p1 id="daytext">NGÀY</p1>
+        </div>
+        <div id="watermark">
+            <h1>@ImAGuyLikeCodin</h1>
+        </div>
+    </div>
+    <button onclick="downloadImage()">Download image</button>
+    <script>
+        function downloadImage() {
+            const element = document.getElementById("image")
+            html2canvas(element).then(canvas => {
+                const link = document.createElement("a")
+                link.download = "image.png"
+                link.href = canvas.toDataURL("image/png")
+                link.click()
+            })
+        }
+
+        const day = new Date("2026-05-30").setHours(0,0,0,0)
+        const now = new Date().setHours(0,0,0,0)
+        const difference = day - now
+        const remaining = difference / (1000 * 60 * 60 * 24)
+        const number = document.getElementById("number")
+        number.textContent = remaining
+    </script>
+</body>
+</html>
