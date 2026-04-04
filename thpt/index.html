@@ -124,7 +124,8 @@
         const difference = day - now
         const remaining = difference / (1000 * 60 * 60 * 24)
         const number = document.getElementById("number")
-        number.textContent = remaining
+        if remaining > 0: number.textContent = remaining
+        else: number.textContent = "Đã qua"
     </script>
 </body>
 </html>
