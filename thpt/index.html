@@ -61,7 +61,7 @@
             font-size: 200px;
             text-shadow: 5px 5px #000000;
             font-family: "Motiva Sans", sans-serif;
-            font-weight: 900;
+            font-weight: 800;
         }
 
         #day {
@@ -127,12 +127,12 @@
         const difference = day - now
         const remaining = difference / (1000 * 60 * 60 * 24)
         const number = document.getElementById("number")
-        if (remaining == 0) {
+        if (remaining > 0) {
+            number.textContent = remaining.toString().padStart(2, "0")
+        } else if (remaining == 0) {
             number.textContent = "Văn + Anh"
         } else if (remaining == -1) {
             number.textContent = "Toán"
-        } else if (remaining > 0) {
-            number.textContent = remaining.toString().padStart(2, "0")
         } else {
             number.textContent = "Đã qua"
         }
