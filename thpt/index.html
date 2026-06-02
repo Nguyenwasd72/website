@@ -130,12 +130,14 @@
             number.textContent = remaining.toString().padStart(2, "0")
         } else if (remaining == 0) {
             number.textContent = "Văn + Anh"
-            number.fontSize = "120px"
-            number.top = "-100px"
+            number.style.fontSize = "120px"
+            number.style.top = "-100px"
         } else if (remaining == -1) {
             number.textContent = "Toán"
         } else {
             number.textContent = "Đã qua"
+            number.style.fontSize = "120px"
+            number.style.top = "-100px"
         }
     </script>
 </body>
