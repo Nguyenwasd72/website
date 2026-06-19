@@ -121,6 +121,8 @@
         </div>
     </div>
     <button onclick="downloadImage()">Download image</button>
+    <button onclick="forPC()">On PC, click to move number down</button>
+    <button onclick="extra()">Move number back up i guess</button>
     <script>
         function downloadImage() {
             const element = document.getElementById("image")
@@ -130,6 +132,16 @@
                 link.href = canvas.toDataURL("image/png")
                 link.click()
             })
+        }
+
+        function forPC() {
+            const nE = document.getElementById("number")
+            nE.style.top = "-185px"
+        }
+
+        function extra() {
+            const nE = document.getElementById("number")
+            nE.style.top = "-155px"
         }
     </script>
 </body>
