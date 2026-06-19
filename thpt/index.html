@@ -108,10 +108,10 @@
             <h1>CÒN KHOẢNG</h1>
         </div>
         <div id="days">
-            <h1 id="number"></h1>
+            <h1 id="number">30</h1>
         </div>
         <div id="day">
-            <p1 id="daytext">NGÀY</p1>
+            <p1 id="daytext">PHÚT</p1>
         </div>
         <div id="watermark">
             <h1>@ImAGuyLikeCodin</h1>
@@ -121,8 +121,6 @@
         </div>
     </div>
     <button onclick="downloadImage()">Download image</button>
-    <button onclick="forPC()">On PC, click to move number down</button>
-    <button onclick="extra()">Move number back up i guess</button>
     <script>
         function downloadImage() {
             const element = document.getElementById("image")
@@ -132,29 +130,6 @@
                 link.href = canvas.toDataURL("image/png")
                 link.click()
             })
-        }
-
-        function forPC() {
-            const nE = document.getElementById("number")
-            nE.style.top = "-125px"
-        }
-
-        function extra() {
-            const nE = document.getElementById("number")
-            nE.style.top = "-155px"
-        }
-
-        const day = new Date("2026-06-19").setHours(0,0,0,0)
-        const now = new Date().setHours(0,0,0,0)
-        const difference = day - now
-        const remaining = difference / (1000 * 60 * 60 * 24)
-        const number = document.getElementById("number")
-        if (remaining > 0) {
-            number.textContent = remaining.toString().padStart(2, "0")
-        } else {
-            number.textContent = "Đã có"
-            number.style.fontSize = "120px"
-            number.style.top = "-40px"
         }
     </script>
 </body>
