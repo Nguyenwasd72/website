@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Days until THPT results</title>
+    <title>Days until THPT</title>
     <link rel="icon" href="https://avatars.githubusercontent.com/u/97346078">
     <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
     <style>
@@ -38,17 +38,17 @@
 
         #only {
             position: absolute;
-            left: 195px;
+            left: 300px;
             font-size: 28px;
             text-shadow: 3px 3px #000000;
         }
 
         #days {
             position: absolute;
-            left: 108px;
-            top: 130px;
-            width: 480px;
-            height: 250px;
+            left: 98px;
+            top: 140px;
+            width: 500px;
+            height: 270px;
             background-color: rgba(0, 0, 0, 0.67);
             border-radius: 25px;
             text-align: center;
@@ -56,7 +56,7 @@
 
         #number {
             position: absolute;
-            top: -155px;
+            top: -145px;
             width: 100%;
             font-size: 200px;
             text-shadow: 5px 5px #000000;
@@ -65,10 +65,10 @@
 
         #day {
             position: absolute;
-            left: 108px;
-            top: 400px;
-            width: 480px;
-            height: 120px;
+            left: 98px;
+            top: 450px;
+            width: 500px;
+            height: 130px;
             background-color: rgba(0, 0, 0, 0.67);
             border-radius: 25px;
             text-align: center;
@@ -76,25 +76,17 @@
 
         #daytext {
             position: absolute;
-            left: 160px;
-            top: 20px;
+            left: 170px;
+            top: 30px;
             font-size: 60px;
             text-shadow: 5px 5px #000000;
         }
 
-        #extra {
-            position: absolute;
-            left: 60px;
-            top: 500px;
-            font-size: 24px;
-            text-shadow: 3px 3px #000000;
-        }
-
         #watermark {
             position: absolute;
-            left: 240px;
-            top: 630px;
-            font-size: 12px;
+            left: 230px;
+            top: 620px;
+            font-size: 14px;
             text-shadow: 2px 2px #000000;
         }
     </style>
@@ -105,19 +97,16 @@
             <img src="./clover.jpg" style="height:700px;width:700px;"></img>
         </div>
         <div id="only">
-            <h1>CÒN KHOẢNG</h1>
+            <h1>it already ended</h1>
         </div>
         <div id="days">
-            <h1 id="number">30</h1>
+            <h1 id="number">everyone got their scores</h1>
         </div>
         <div id="day">
-            <p1 id="daytext">PHÚT</p1>
+            <p1 id="daytext">why are you still here</p1>
         </div>
         <div id="watermark">
             <h1>@ImAGuyLikeCodin</h1>
-        </div>
-        <div id="extra">
-            <h1>để nhận kết quả + điểm chuẩn</h1>
         </div>
     </div>
     <button onclick="downloadImage()">Download image</button>
@@ -143,6 +132,26 @@
             const nE = document.getElementById("number")
             nE.style.top = "-155px"
         }
+
+        // GGWP got into nv1 :D
+        // const day = new Date("2026-05-30").setHours(0,0,0,0)
+        // const now = new Date().setHours(0,0,0,0)
+        // const difference = day - now
+        // const remaining = difference / (1000 * 60 * 60 * 24)
+        // const number = document.getElementById("number")
+        // if (remaining > 0) {
+        //     number.textContent = remaining.toString().padStart(2, "0")
+        // } else if (remaining == 0) {
+        //     number.textContent = "Văn + Anh"
+        //     number.style.fontSize = "120px"
+        //     number.style.top = "-100px"
+        // } else if (remaining == -1) {
+        //     number.textContent = "Toán"
+        // } else {
+        //     number.textContent = "Đã qua"
+        //     number.style.fontSize = "120px"
+        //     number.style.top = "-100px"
+        // }
     </script>
 </body>
 </html>
